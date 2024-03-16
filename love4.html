@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link
+rel="stylesheet" href="style2.css"
+/>
+    <style>
+       @media (max-width:2500px){
+        body{
+            background-color: pink;
+            display:flex;
+            height:100vh;
+            align-items:center;
+            justify-content: center;
+        }
+      .div1{
+        background-color: pink;
+        display:block;
+        height: 400px;
+        width: 300px;
+      }
+      img{
+        position:relative;
+        left:50px;
+        top:10px;
+        height: 200px;
+        width: 200px;
+      }
+      .yes{
+        margin-left:100px;
+        margin-right:20px;
+      }
+      h2{
+        margin-left: 50px;
+      }
+      button{
+        border-radius: 20%;
+        background-color: white;
+        width:40px;
+        font-weight: bold;
+      }
+
+     
+       }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img class="img1" src="../Couple Massage Sticker - Couple Massage Relax - Discover & Share GIFs.gif">
+        <h2>Ab Bol K Dikha 😏</h2>
+        <a href="http://127.0.0.1:3000/loveYes.html"><button class="yes">yes</button></a>
+        <button id="myButton">No</button>
+
+        <script>
+            document.getElementById('myButton').addEventListener('click', function() {
+                var button = this;
+                var windowWidth = window.innerWidth;
+                var windowHeight = window.innerHeight;
+                var randomX = Math.floor(Math.random() * (windowWidth - button.offsetWidth));
+                var randomY = Math.floor(Math.random() * (windowHeight - button.offsetHeight));
+                button.style.transform = 'translate(' + randomX + 'px, ' + randomY + 'px)';
+            });
+        </script>
+    </div>
+   
+
+
+</body>
+</html>
